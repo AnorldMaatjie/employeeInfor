@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar  color="primary">
+    <ion-title>Employee Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list *ngFor = "let i of test; b as index">
+     
+    <img [src]="i.image" style="width:300px;height: 200px;"/>
+      <ion-item>
+          <ion-label stacked> Name:</ion-label><br>
+          <ion-input type="text" value="{{i.fname}}" #fname></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label stacked>Surname:</ion-label><br>
+          <ion-input type="text" value="{{i.lname}}" #lname></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>id:</ion-label><br>
+        <ion-input type="text" value="{{i.id}}" #id></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>email:</ion-label><br>
+      <ion-input type="text" value="{{i.email}}" #email></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>role:</ion-label><br>
+    <ion-input type="text" value="{{i.role}}" #role></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked>username:</ion-label><br>
+  <ion-input type="text" value="{{i.username}}" #username></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked>pin:</ion-label><br>
+  <ion-input type="text" value="{{i.pin}}" #pin></ion-input>
+</ion-item>
+      <button ion-button color="secondary" (click)="updateEmp(b)">Update Employee</button>
+      <button ion-button color="danger"(click)="delete(b)">Delete</button> 
+  </ion-list> 
+  
+
+
+
+
+
+
+  </ion-content>
